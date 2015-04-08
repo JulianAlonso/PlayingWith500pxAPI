@@ -26,6 +26,8 @@
 		013189631AD599B100DA4F6B /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189621AD599B100DA4F6B /* Photo.m */; };
 		013189671AD59A6800DA4F6B /* PhotoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189661AD59A6800DA4F6B /* PhotoParser.m */; };
 		0131896B1AD5A02000DA4F6B /* PopularPhotoCollectionViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131896A1AD5A02000DA4F6B /* PopularPhotoCollectionViewCellController.m */; };
+		013189701AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131896E1AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.m */; };
+		013189711AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0131896F1AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,9 @@
 		013189661AD59A6800DA4F6B /* PhotoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoParser.m; path = Parsers/PhotoParser.m; sourceTree = "<group>"; };
 		013189691AD5A02000DA4F6B /* PopularPhotoCollectionViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopularPhotoCollectionViewCellController.h; path = Controllers/PopularPhotoCollectionViewCellController.h; sourceTree = "<group>"; };
 		0131896A1AD5A02000DA4F6B /* PopularPhotoCollectionViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopularPhotoCollectionViewCellController.m; path = Controllers/PopularPhotoCollectionViewCellController.m; sourceTree = "<group>"; };
+		0131896D1AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopularPhotoCollectionViewCell.h; path = Cells/PopularPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		0131896E1AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopularPhotoCollectionViewCell.m; path = Cells/PopularPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		0131896F1AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopularPhotoCollectionViewCell.xib; path = Cells/PopularPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +135,7 @@
 				013189461AD572D800DA4F6B /* Providers */,
 				013189421AD5713D00DA4F6B /* Interactors */,
 				013189331AD55ED400DA4F6B /* ViewControllers */,
+				0131896C1AD5A06700DA4F6B /* Cells */,
 				013189681AD5A00000DA4F6B /* Controllers */,
 				013189601AD5998E00DA4F6B /* PONSOS */,
 				013189341AD55EF000DA4F6B /* CoreData */,
@@ -279,6 +285,16 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		0131896C1AD5A06700DA4F6B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0131896D1AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.h */,
+				0131896E1AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.m */,
+				0131896F1AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,6 +378,7 @@
 				0131893E1AD56F5200DA4F6B /* PopularPhotosViewController.xib in Resources */,
 				0131891A1AD55DF400DA4F6B /* LaunchScreen.xib in Resources */,
 				013189171AD55DF400DA4F6B /* Images.xcassets in Resources */,
+				013189711AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +410,7 @@
 				0131895B1AD5840800DA4F6B /* URLHelper.m in Sources */,
 				0131890F1AD55DF400DA4F6B /* PlayingWith500px.xcdatamodeld in Sources */,
 				013189571AD57CEC00DA4F6B /* CustomRequestManager.m in Sources */,
+				013189701AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.m in Sources */,
 				013189411AD5706E00DA4F6B /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

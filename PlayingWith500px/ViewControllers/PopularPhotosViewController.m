@@ -8,6 +8,9 @@
 
 #import "PopularPhotosViewController.h"
 #import "LoadPopularPhotosInteractor.h"
+#import "PopularPhotoCollectionViewCell.h"
+#import "Photo.h"
+#import "PopularPhotoCollectionViewCellController.h"
 
 NSString *const kPhotosPath = @"photos";
 
@@ -15,7 +18,7 @@ NSString *const kPhotosPath = @"photos";
 
 @property (weak, nonatomic) IBOutlet UICollectionView *photosCollectionView;
 @property (nonatomic, strong) NSArray *photos;
-@property (nonatomic, strong) NSString *controllers;
+@property (nonatomic, strong) NSArray *controllers;
 
 @end
 
@@ -38,6 +41,15 @@ NSString *const kPhotosPath = @"photos";
     self.photosCollectionView.contentInset = UIEdgeInsetsMake(self.topLayoutGuide.length, 0, 0, 0);
 }
 
+#pragma mark - Config methods.
+- (void)configPhotoCollectionView
+{
+    [self.photosCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([PopularPhotoCollectionViewCell class]) bundle:nil]
+                forCellWithReuseIdentifier:NSStringFromClass([PopularPhotoCollectionViewCell class])];
+    self.photosCollectionView.delegate = self;
+    self.photosCollectionView.dataSource = self;
+}
+
 #pragma mark - load methods.
 - (void)loadPhotos
 {
@@ -54,7 +66,13 @@ NSString *const kPhotosPath = @"photos";
 #pragma mark - Update methods.
 - (void)updateControllers
 {
-    
+    NSMutableArray *controllers = [NSMutableArray array];
+    for (__unused Photo *p in self.photos)
+    {
+        PopularPhotoCollectionViewCellController *controller = [PopularPhotoCollectionViewCellController new];
+        [controllers addObject:controller];
+    }
+    self.controllers = controllers;
 }
 
 #pragma mark - Observe methods.
@@ -80,7 +98,14 @@ NSString *const kPhotosPath = @"photos";
 #pragma mark - DataSource methods.
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    PopularPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([PopularPhotoCollectionViewCell class]) forIndexPath:indexPath];
+    
+    PopularPhotoCollectionViewCellController *controller = self.controllers[indexPath.item];
+    
+    controller.cell = cell;
+    controller.photo = self.photos[indexPath.item];
+    
+    return [controller configuredCell];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
