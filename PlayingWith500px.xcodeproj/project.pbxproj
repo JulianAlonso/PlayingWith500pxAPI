@@ -25,6 +25,7 @@
 		0131895F1AD5940300DA4F6B /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131895E1AD5940300DA4F6B /* RequestManagerFactory.m */; };
 		013189631AD599B100DA4F6B /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189621AD599B100DA4F6B /* Photo.m */; };
 		013189671AD59A6800DA4F6B /* PhotoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189661AD59A6800DA4F6B /* PhotoParser.m */; };
+		0131896B1AD5A02000DA4F6B /* PopularPhotoCollectionViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131896A1AD5A02000DA4F6B /* PopularPhotoCollectionViewCellController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		013189621AD599B100DA4F6B /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = PONSOS/Photo.m; sourceTree = "<group>"; };
 		013189651AD59A6800DA4F6B /* PhotoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoParser.h; path = Parsers/PhotoParser.h; sourceTree = "<group>"; };
 		013189661AD59A6800DA4F6B /* PhotoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoParser.m; path = Parsers/PhotoParser.m; sourceTree = "<group>"; };
+		013189691AD5A02000DA4F6B /* PopularPhotoCollectionViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopularPhotoCollectionViewCellController.h; path = Controllers/PopularPhotoCollectionViewCellController.h; sourceTree = "<group>"; };
+		0131896A1AD5A02000DA4F6B /* PopularPhotoCollectionViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopularPhotoCollectionViewCellController.m; path = Controllers/PopularPhotoCollectionViewCellController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,7 @@
 				013189461AD572D800DA4F6B /* Providers */,
 				013189421AD5713D00DA4F6B /* Interactors */,
 				013189331AD55ED400DA4F6B /* ViewControllers */,
+				013189681AD5A00000DA4F6B /* Controllers */,
 				013189601AD5998E00DA4F6B /* PONSOS */,
 				013189341AD55EF000DA4F6B /* CoreData */,
 				013189161AD55DF400DA4F6B /* Images.xcassets */,
@@ -266,6 +270,15 @@
 			name = Parsers;
 			sourceTree = "<group>";
 		};
+		013189681AD5A00000DA4F6B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				013189691AD5A02000DA4F6B /* PopularPhotoCollectionViewCellController.h */,
+				0131896A1AD5A02000DA4F6B /* PopularPhotoCollectionViewCellController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -370,6 +383,7 @@
 				013189451AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m in Sources */,
 				013189521AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m in Sources */,
 				013189671AD59A6800DA4F6B /* PhotoParser.m in Sources */,
+				0131896B1AD5A02000DA4F6B /* PopularPhotoCollectionViewCellController.m in Sources */,
 				0131894C1AD5760100DA4F6B /* APIVars.m in Sources */,
 				013189631AD599B100DA4F6B /* Photo.m in Sources */,
 				0131893D1AD56F5200DA4F6B /* PopularPhotosViewController.m in Sources */,
