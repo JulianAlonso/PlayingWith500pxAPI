@@ -9,6 +9,7 @@
 #import "PopularPhotosRouter.h"
 #import "PopularPhotosViewController.h"
 #import "LoadPopularPhotosInteractor.h"
+#import "FiveHungredpxExternalPhotosProvider.h"
 
 
 @interface PopularPhotosRouter ()
@@ -24,8 +25,10 @@
     PopularPhotosViewController *ppViewControler = [[PopularPhotosViewController alloc] init];
     ppViewControler.router = self;
     self.popularPhotosViewController = ppViewControler;
-    ppViewControler.loadPopularPhotosInteractor = [LoadPopularPhotosInteractor new];
     
+    LoadPopularPhotosInteractor *lppi = [LoadPopularPhotosInteractor new];
+    lppi.externalPhotosProvider = [FiveHungredpxExternalPhotosProvider new];
+    ppViewControler.loadPopularPhotosInteractor = lppi;
     
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:ppViewControler];
     

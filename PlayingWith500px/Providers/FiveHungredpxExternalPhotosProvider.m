@@ -18,7 +18,10 @@
     [params setObject:POPULAR_FEATURE forKey:PARAM_FEATURE];
     
     [self.requestManager GETendpoint:PHOTOS_END_POINT params:params Completion:^(NSData *data) {
-        NSLog(@"DATA %@", data);
+        
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        
+        NSLog(@"DATA %@", dic);
     }];
 }
 
