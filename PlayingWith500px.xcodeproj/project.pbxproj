@@ -13,9 +13,9 @@
 		013189171AD55DF400DA4F6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 013189161AD55DF400DA4F6B /* Images.xcassets */; };
 		0131891A1AD55DF400DA4F6B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013189181AD55DF400DA4F6B /* LaunchScreen.xib */; };
 		013189261AD55DF400DA4F6B /* PlayingWith500pxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189251AD55DF400DA4F6B /* PlayingWith500pxTests.m */; };
-		013189321AD55ECE00DA4F6B /* MainRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189311AD55ECE00DA4F6B /* MainRouter.m */; };
-		013189381AD55F2E00DA4F6B /* PopularPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189361AD55F2E00DA4F6B /* PopularPhotosCollectionViewController.m */; };
-		013189391AD55F2E00DA4F6B /* PopularPhotosCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013189371AD55F2E00DA4F6B /* PopularPhotosCollectionViewController.xib */; };
+		013189321AD55ECE00DA4F6B /* PopularPhotosRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189311AD55ECE00DA4F6B /* PopularPhotosRouter.m */; };
+		0131893D1AD56F5200DA4F6B /* PopularPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131893B1AD56F5200DA4F6B /* PopularPhotosViewController.m */; };
+		0131893E1AD56F5200DA4F6B /* PopularPhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0131893C1AD56F5200DA4F6B /* PopularPhotosViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +40,11 @@
 		0131891F1AD55DF400DA4F6B /* PlayingWith500pxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayingWith500pxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		013189241AD55DF400DA4F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		013189251AD55DF400DA4F6B /* PlayingWith500pxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingWith500pxTests.m; sourceTree = "<group>"; };
-		013189301AD55ECE00DA4F6B /* MainRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainRouter.h; path = Routers/MainRouter.h; sourceTree = "<group>"; };
-		013189311AD55ECE00DA4F6B /* MainRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainRouter.m; path = Routers/MainRouter.m; sourceTree = "<group>"; };
-		013189351AD55F2E00DA4F6B /* PopularPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopularPhotosCollectionViewController.h; path = ViewControllers/PopularPhotosCollectionViewController.h; sourceTree = "<group>"; };
-		013189361AD55F2E00DA4F6B /* PopularPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopularPhotosCollectionViewController.m; path = ViewControllers/PopularPhotosCollectionViewController.m; sourceTree = "<group>"; };
-		013189371AD55F2E00DA4F6B /* PopularPhotosCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopularPhotosCollectionViewController.xib; path = ViewControllers/PopularPhotosCollectionViewController.xib; sourceTree = "<group>"; };
+		013189301AD55ECE00DA4F6B /* PopularPhotosRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopularPhotosRouter.h; path = Routers/PopularPhotosRouter.h; sourceTree = "<group>"; };
+		013189311AD55ECE00DA4F6B /* PopularPhotosRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopularPhotosRouter.m; path = Routers/PopularPhotosRouter.m; sourceTree = "<group>"; };
+		0131893A1AD56F5200DA4F6B /* PopularPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopularPhotosViewController.h; path = ViewControllers/PopularPhotosViewController.h; sourceTree = "<group>"; };
+		0131893B1AD56F5200DA4F6B /* PopularPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopularPhotosViewController.m; path = ViewControllers/PopularPhotosViewController.m; sourceTree = "<group>"; };
+		0131893C1AD56F5200DA4F6B /* PopularPhotosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopularPhotosViewController.xib; path = ViewControllers/PopularPhotosViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +127,8 @@
 		0131892F1AD55EB500DA4F6B /* Routers */ = {
 			isa = PBXGroup;
 			children = (
-				013189301AD55ECE00DA4F6B /* MainRouter.h */,
-				013189311AD55ECE00DA4F6B /* MainRouter.m */,
+				013189301AD55ECE00DA4F6B /* PopularPhotosRouter.h */,
+				013189311AD55ECE00DA4F6B /* PopularPhotosRouter.m */,
 			);
 			name = Routers;
 			sourceTree = "<group>";
@@ -136,9 +136,9 @@
 		013189331AD55ED400DA4F6B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				013189351AD55F2E00DA4F6B /* PopularPhotosCollectionViewController.h */,
-				013189361AD55F2E00DA4F6B /* PopularPhotosCollectionViewController.m */,
-				013189371AD55F2E00DA4F6B /* PopularPhotosCollectionViewController.xib */,
+				0131893A1AD56F5200DA4F6B /* PopularPhotosViewController.h */,
+				0131893B1AD56F5200DA4F6B /* PopularPhotosViewController.m */,
+				0131893C1AD56F5200DA4F6B /* PopularPhotosViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -231,9 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0131893E1AD56F5200DA4F6B /* PopularPhotosViewController.xib in Resources */,
 				0131891A1AD55DF400DA4F6B /* LaunchScreen.xib in Resources */,
 				013189171AD55DF400DA4F6B /* Images.xcassets in Resources */,
-				013189391AD55F2E00DA4F6B /* PopularPhotosCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,9 +252,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0131890C1AD55DF400DA4F6B /* AppDelegate.m in Sources */,
-				013189381AD55F2E00DA4F6B /* PopularPhotosCollectionViewController.m in Sources */,
+				0131893D1AD56F5200DA4F6B /* PopularPhotosViewController.m in Sources */,
 				013189091AD55DF400DA4F6B /* main.m in Sources */,
-				013189321AD55ECE00DA4F6B /* MainRouter.m in Sources */,
+				013189321AD55ECE00DA4F6B /* PopularPhotosRouter.m in Sources */,
 				0131890F1AD55DF400DA4F6B /* PlayingWith500px.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
