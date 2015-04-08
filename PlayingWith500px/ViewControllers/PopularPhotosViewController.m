@@ -7,8 +7,11 @@
 //
 
 #import "PopularPhotosViewController.h"
+#import "LoadPopularPhotosInteractor.h"
 
 @interface PopularPhotosViewController ()
+
+@property (nonatomic, strong) NSArray *photos;
 
 @end
 
@@ -17,11 +20,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self loadPhotos];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - load methods.
+- (void)loadPhotos
+{
+    __weak typeof(self) weakSelf = self;
+    [self.loadPopularPhotosInteractor loadPopularPhotosWithCompletion:^(NSArray *photos) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        strongSelf.photos = photos;
+    }];
 }
 
 @end

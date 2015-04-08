@@ -8,6 +8,7 @@
 
 #import "PopularPhotosRouter.h"
 #import "PopularPhotosViewController.h"
+#import "LoadPopularPhotosInteractor.h"
 
 
 @interface PopularPhotosRouter ()
@@ -23,6 +24,7 @@
     PopularPhotosViewController *ppViewControler = [[PopularPhotosViewController alloc] init];
     ppViewControler.router = self;
     self.popularPhotosViewController = ppViewControler;
+    ppViewControler.loadPopularPhotosInteractor = [LoadPopularPhotosInteractor new];
     
     
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:ppViewControler];

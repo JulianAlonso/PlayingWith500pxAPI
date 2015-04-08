@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class PopularPhotosRouter;
+@class LoadPopularPhotosInteractor;
 
 @interface PopularPhotosViewController : UIViewController
 
 @property (nonatomic, strong) PopularPhotosRouter *router;
+@property (nonatomic, strong) LoadPopularPhotosInteractor *loadPopularPhotosInteractor;
 
 @end
