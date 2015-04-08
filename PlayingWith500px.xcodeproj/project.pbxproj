@@ -24,6 +24,7 @@
 		0131895B1AD5840800DA4F6B /* URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131895A1AD5840800DA4F6B /* URLHelper.m */; };
 		0131895F1AD5940300DA4F6B /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131895E1AD5940300DA4F6B /* RequestManagerFactory.m */; };
 		013189631AD599B100DA4F6B /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189621AD599B100DA4F6B /* Photo.m */; };
+		013189671AD59A6800DA4F6B /* PhotoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189661AD59A6800DA4F6B /* PhotoParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		0131895E1AD5940300DA4F6B /* RequestManagerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestManagerFactory.m; path = Factories/RequestManagerFactory.m; sourceTree = "<group>"; };
 		013189611AD599B100DA4F6B /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = PONSOS/Photo.h; sourceTree = "<group>"; };
 		013189621AD599B100DA4F6B /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = PONSOS/Photo.m; sourceTree = "<group>"; };
+		013189651AD59A6800DA4F6B /* PhotoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoParser.h; path = Parsers/PhotoParser.h; sourceTree = "<group>"; };
+		013189661AD59A6800DA4F6B /* PhotoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoParser.m; path = Parsers/PhotoParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 				0131890B1AD55DF400DA4F6B /* AppDelegate.m */,
 				013189491AD575EC00DA4F6B /* Master */,
 				013189581AD583E900DA4F6B /* Helpers */,
+				013189641AD59A5200DA4F6B /* Parsers */,
 				0131895C1AD593EE00DA4F6B /* Factories */,
 				0131892F1AD55EB500DA4F6B /* Routers */,
 				013189531AD5786400DA4F6B /* RequestManagers */,
@@ -253,6 +257,15 @@
 			name = PONSOS;
 			sourceTree = "<group>";
 		};
+		013189641AD59A5200DA4F6B /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				013189651AD59A6800DA4F6B /* PhotoParser.h */,
+				013189661AD59A6800DA4F6B /* PhotoParser.m */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -356,6 +369,7 @@
 				0131890C1AD55DF400DA4F6B /* AppDelegate.m in Sources */,
 				013189451AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m in Sources */,
 				013189521AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m in Sources */,
+				013189671AD59A6800DA4F6B /* PhotoParser.m in Sources */,
 				0131894C1AD5760100DA4F6B /* APIVars.m in Sources */,
 				013189631AD599B100DA4F6B /* Photo.m in Sources */,
 				0131893D1AD56F5200DA4F6B /* PopularPhotosViewController.m in Sources */,

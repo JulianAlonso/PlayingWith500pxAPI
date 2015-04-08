@@ -9,6 +9,7 @@
 #import "FiveHungredpxExternalPhotosProvider.h"
 #import "APIVars.h"
 #import "RequestManagerFactory.h"
+#import "PhotoParser.h"
 
 @implementation FiveHungredpxExternalPhotosProvider
 
@@ -19,9 +20,11 @@
     
     [self.requestManager GETendpoint:PHOTOS_END_POINT params:params Completion:^(NSData *data) {
         
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-        
-        NSLog(@"DATA %@", dic);
+        if (data)
+        {
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+            completion([PhotoParser photosFromDictionaries:dic[@"photos"]]);
+        }
     }];
 }
 

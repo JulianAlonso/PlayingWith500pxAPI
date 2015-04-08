@@ -14,5 +14,6 @@
 @property (nonatomic, copy) NSString *photoDescription;
 @property (nonatomic, copy) NSString *photoCamera;
 @property (nonatomic, copy) NSString *photoAperture;
+@property (nonatomic, copy) NSString *photoURL;
 
 @end

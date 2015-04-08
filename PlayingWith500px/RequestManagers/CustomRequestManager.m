@@ -22,7 +22,7 @@
         
         if (error)
         {
-            completion([NSData data]);
+            completion(nil);
         }
         else
         {
