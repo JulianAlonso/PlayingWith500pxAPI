@@ -7,9 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LocalPhotosProvider.h"
+#import "ExternalPhotosProvider.h"
+
+typedef void(^CompletedLoadPhotos)(NSArray *photos);
 
 @interface LoadPopularPhotosInteractor : NSObject
 
-- (void)loadPopularPhotosWithCompletion:(void(^)(NSArray *photos))completion;
+@property (nonatomic, strong) id<LocalPhotosProvider> localPhotosProvider;
+@property (nonatomic, strong) id<ExternalPhotosProvider> externalPhotosProvider;
+
+- (void)loadPopularPhotosWithCompletion:(CompletedLoadPhotos)completion andUpdate:(CompletedLoadPhotos)update;
 
 @end

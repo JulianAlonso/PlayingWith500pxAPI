@@ -51,6 +51,8 @@
 		013189401AD5706E00DA4F6B /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataStack.m; path = CoreData/CoreDataStack.m; sourceTree = "<group>"; };
 		013189431AD5715E00DA4F6B /* LoadPopularPhotosInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadPopularPhotosInteractor.h; path = Interactors/LoadPopularPhotosInteractor.h; sourceTree = "<group>"; };
 		013189441AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadPopularPhotosInteractor.m; path = Interactors/LoadPopularPhotosInteractor.m; sourceTree = "<group>"; };
+		013189471AD572F500DA4F6B /* LocalPhotosProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalPhotosProvider.h; path = Providers/LocalPhotosProvider.h; sourceTree = "<group>"; };
+		013189481AD573AB00DA4F6B /* ExternalPhotosProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExternalPhotosProvider.h; path = Providers/ExternalPhotosProvider.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				0131890A1AD55DF400DA4F6B /* AppDelegate.h */,
 				0131890B1AD55DF400DA4F6B /* AppDelegate.m */,
 				0131892F1AD55EB500DA4F6B /* Routers */,
+				013189461AD572D800DA4F6B /* Providers */,
 				013189421AD5713D00DA4F6B /* Interactors */,
 				013189331AD55ED400DA4F6B /* ViewControllers */,
 				013189341AD55EF000DA4F6B /* CoreData */,
@@ -167,6 +170,15 @@
 				013189441AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m */,
 			);
 			name = Interactors;
+			sourceTree = "<group>";
+		};
+		013189461AD572D800DA4F6B /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				013189471AD572F500DA4F6B /* LocalPhotosProvider.h */,
+				013189481AD573AB00DA4F6B /* ExternalPhotosProvider.h */,
+			);
+			name = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -10,9 +10,15 @@
 
 @implementation LoadPopularPhotosInteractor
 
-- (void)loadPopularPhotosWithCompletion:(void(^)(NSArray *photos))completion
+- (void)loadPopularPhotosWithCompletion:(CompletedLoadPhotos)completion andUpdate:(CompletedLoadPhotos)update
 {
-    NSLog(@"Im called");
+    [self.localPhotosProvider loadStoredPhotosWithCompletion:^(NSArray *photos) {
+        completion(photos);
+    }];
+    
+    [self.externalPhotosProvider loadPopularPhotosWithCompletion:^(NSArray *photos) {
+        update(photos);
+    }];
 }
 
 @end

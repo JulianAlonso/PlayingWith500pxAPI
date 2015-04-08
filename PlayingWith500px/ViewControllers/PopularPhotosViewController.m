@@ -33,11 +33,13 @@
 - (void)loadPhotos
 {
     __weak typeof(self) weakSelf = self;
-    [self.loadPopularPhotosInteractor loadPopularPhotosWithCompletion:^(NSArray *photos) {
+    CompletedLoadPhotos block = ^void(NSArray *photos) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
         strongSelf.photos = photos;
-    }];
+    };
+    
+    [self.loadPopularPhotosInteractor loadPopularPhotosWithCompletion:block andUpdate:block];
 }
 
 @end
