@@ -18,6 +18,7 @@
 		0131893E1AD56F5200DA4F6B /* PopularPhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0131893C1AD56F5200DA4F6B /* PopularPhotosViewController.xib */; };
 		013189411AD5706E00DA4F6B /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189401AD5706E00DA4F6B /* CoreDataStack.m */; };
 		013189451AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189441AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m */; };
+		0131894C1AD5760100DA4F6B /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131894B1AD5760100DA4F6B /* APIVars.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		013189441AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadPopularPhotosInteractor.m; path = Interactors/LoadPopularPhotosInteractor.m; sourceTree = "<group>"; };
 		013189471AD572F500DA4F6B /* LocalPhotosProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalPhotosProvider.h; path = Providers/LocalPhotosProvider.h; sourceTree = "<group>"; };
 		013189481AD573AB00DA4F6B /* ExternalPhotosProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExternalPhotosProvider.h; path = Providers/ExternalPhotosProvider.h; sourceTree = "<group>"; };
+		0131894A1AD5760100DA4F6B /* APIVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIVars.h; path = Master/APIVars.h; sourceTree = "<group>"; };
+		0131894B1AD5760100DA4F6B /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,7 @@
 			children = (
 				0131890A1AD55DF400DA4F6B /* AppDelegate.h */,
 				0131890B1AD55DF400DA4F6B /* AppDelegate.m */,
+				013189491AD575EC00DA4F6B /* Master */,
 				0131892F1AD55EB500DA4F6B /* Routers */,
 				013189461AD572D800DA4F6B /* Providers */,
 				013189421AD5713D00DA4F6B /* Interactors */,
@@ -179,6 +183,15 @@
 				013189481AD573AB00DA4F6B /* ExternalPhotosProvider.h */,
 			);
 			name = Providers;
+			sourceTree = "<group>";
+		};
+		013189491AD575EC00DA4F6B /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				0131894A1AD5760100DA4F6B /* APIVars.h */,
+				0131894B1AD5760100DA4F6B /* APIVars.m */,
+			);
+			name = Master;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +296,7 @@
 			files = (
 				0131890C1AD55DF400DA4F6B /* AppDelegate.m in Sources */,
 				013189451AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m in Sources */,
+				0131894C1AD5760100DA4F6B /* APIVars.m in Sources */,
 				0131893D1AD56F5200DA4F6B /* PopularPhotosViewController.m in Sources */,
 				013189091AD55DF400DA4F6B /* main.m in Sources */,
 				013189321AD55ECE00DA4F6B /* PopularPhotosRouter.m in Sources */,
