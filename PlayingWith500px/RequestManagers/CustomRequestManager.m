@@ -14,7 +14,6 @@
 
 - (void)GETendpoint:(NSString *)endpoint params:(NSDictionary *)params Completion:(void (^)(NSData *))completion
 {
-    
     NSURL *url = [URLHelper urlWithString:[NSString stringWithFormat:@"%@%@", BASE_POINT, endpoint] andParams:params];
     
     NSURLSession *session = [NSURLSession sharedSession];
