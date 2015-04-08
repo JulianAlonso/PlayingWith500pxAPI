@@ -59,6 +59,7 @@
 		0131894B1AD5760100DA4F6B /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
 		013189501AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FiveHungredpxExternalPhotosProvider.h; path = Providers/FiveHungredpxExternalPhotosProvider.h; sourceTree = "<group>"; };
 		013189511AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FiveHungredpxExternalPhotosProvider.m; path = Providers/FiveHungredpxExternalPhotosProvider.m; sourceTree = "<group>"; };
+		013189541AD5789200DA4F6B /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = RequestManagers/RequestManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 				0131890B1AD55DF400DA4F6B /* AppDelegate.m */,
 				013189491AD575EC00DA4F6B /* Master */,
 				0131892F1AD55EB500DA4F6B /* Routers */,
+				013189531AD5786400DA4F6B /* RequestManagers */,
 				013189461AD572D800DA4F6B /* Providers */,
 				013189421AD5713D00DA4F6B /* Interactors */,
 				013189331AD55ED400DA4F6B /* ViewControllers */,
@@ -197,6 +199,14 @@
 				0131894B1AD5760100DA4F6B /* APIVars.m */,
 			);
 			name = Master;
+			sourceTree = "<group>";
+		};
+		013189531AD5786400DA4F6B /* RequestManagers */ = {
+			isa = PBXGroup;
+			children = (
+				013189541AD5789200DA4F6B /* RequestManager.h */,
+			);
+			name = RequestManagers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "ExternalPhotosProvider.h"
+#import "RequestManager.h"
 
 @interface FiveHungredpxExternalPhotosProvider : NSObject <ExternalPhotosProvider>
+
+@property (nonatomic, strong) id<RequestManager> requestManager;
 
 @end
