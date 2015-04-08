@@ -22,6 +22,7 @@
 		013189521AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189511AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m */; };
 		013189571AD57CEC00DA4F6B /* CustomRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189561AD57CEC00DA4F6B /* CustomRequestManager.m */; };
 		0131895B1AD5840800DA4F6B /* URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131895A1AD5840800DA4F6B /* URLHelper.m */; };
+		0131895F1AD5940300DA4F6B /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131895E1AD5940300DA4F6B /* RequestManagerFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		013189561AD57CEC00DA4F6B /* CustomRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomRequestManager.m; path = RequestManagers/CustomRequestManager.m; sourceTree = "<group>"; };
 		013189591AD5840800DA4F6B /* URLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLHelper.h; path = Helpers/URLHelper.h; sourceTree = "<group>"; };
 		0131895A1AD5840800DA4F6B /* URLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLHelper.m; path = Helpers/URLHelper.m; sourceTree = "<group>"; };
+		0131895D1AD5940300DA4F6B /* RequestManagerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManagerFactory.h; path = Factories/RequestManagerFactory.h; sourceTree = "<group>"; };
+		0131895E1AD5940300DA4F6B /* RequestManagerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestManagerFactory.m; path = Factories/RequestManagerFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 				0131890B1AD55DF400DA4F6B /* AppDelegate.m */,
 				013189491AD575EC00DA4F6B /* Master */,
 				013189581AD583E900DA4F6B /* Helpers */,
+				0131895C1AD593EE00DA4F6B /* Factories */,
 				0131892F1AD55EB500DA4F6B /* Routers */,
 				013189531AD5786400DA4F6B /* RequestManagers */,
 				013189461AD572D800DA4F6B /* Providers */,
@@ -227,6 +231,15 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		0131895C1AD593EE00DA4F6B /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				0131895D1AD5940300DA4F6B /* RequestManagerFactory.h */,
+				0131895E1AD5940300DA4F6B /* RequestManagerFactory.m */,
+			);
+			name = Factories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -333,6 +346,7 @@
 				0131894C1AD5760100DA4F6B /* APIVars.m in Sources */,
 				0131893D1AD56F5200DA4F6B /* PopularPhotosViewController.m in Sources */,
 				013189091AD55DF400DA4F6B /* main.m in Sources */,
+				0131895F1AD5940300DA4F6B /* RequestManagerFactory.m in Sources */,
 				013189321AD55ECE00DA4F6B /* PopularPhotosRouter.m in Sources */,
 				0131895B1AD5840800DA4F6B /* URLHelper.m in Sources */,
 				0131890F1AD55DF400DA4F6B /* PlayingWith500px.xcdatamodeld in Sources */,

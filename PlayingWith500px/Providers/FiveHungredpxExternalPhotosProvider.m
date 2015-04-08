@@ -8,6 +8,7 @@
 
 #import "FiveHungredpxExternalPhotosProvider.h"
 #import "APIVars.h"
+#import "RequestManagerFactory.h"
 
 @implementation FiveHungredpxExternalPhotosProvider
 
@@ -19,6 +20,15 @@
     [self.requestManager GETendpoint:PHOTOS_END_POINT params:params Completion:^(NSData *data) {
         NSLog(@"DATA %@", data);
     }];
+}
+
+- (id<RequestManager>)requestManager
+{
+    if (!_requestManager)
+    {
+        _requestManager = [RequestManagerFactory defaultRequestManager];
+    }
+    return _requestManager;
 }
 
 @end
