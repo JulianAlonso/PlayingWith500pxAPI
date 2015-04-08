@@ -20,6 +20,8 @@
 		013189451AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189441AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m */; };
 		0131894C1AD5760100DA4F6B /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131894B1AD5760100DA4F6B /* APIVars.m */; };
 		013189521AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189511AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m */; };
+		013189571AD57CEC00DA4F6B /* CustomRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189561AD57CEC00DA4F6B /* CustomRequestManager.m */; };
+		0131895B1AD5840800DA4F6B /* URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131895A1AD5840800DA4F6B /* URLHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		013189501AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FiveHungredpxExternalPhotosProvider.h; path = Providers/FiveHungredpxExternalPhotosProvider.h; sourceTree = "<group>"; };
 		013189511AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FiveHungredpxExternalPhotosProvider.m; path = Providers/FiveHungredpxExternalPhotosProvider.m; sourceTree = "<group>"; };
 		013189541AD5789200DA4F6B /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = RequestManagers/RequestManager.h; sourceTree = "<group>"; };
+		013189551AD57CEC00DA4F6B /* CustomRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomRequestManager.h; path = RequestManagers/CustomRequestManager.h; sourceTree = "<group>"; };
+		013189561AD57CEC00DA4F6B /* CustomRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomRequestManager.m; path = RequestManagers/CustomRequestManager.m; sourceTree = "<group>"; };
+		013189591AD5840800DA4F6B /* URLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLHelper.h; path = Helpers/URLHelper.h; sourceTree = "<group>"; };
+		0131895A1AD5840800DA4F6B /* URLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLHelper.m; path = Helpers/URLHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 				0131890A1AD55DF400DA4F6B /* AppDelegate.h */,
 				0131890B1AD55DF400DA4F6B /* AppDelegate.m */,
 				013189491AD575EC00DA4F6B /* Master */,
+				013189581AD583E900DA4F6B /* Helpers */,
 				0131892F1AD55EB500DA4F6B /* Routers */,
 				013189531AD5786400DA4F6B /* RequestManagers */,
 				013189461AD572D800DA4F6B /* Providers */,
@@ -205,8 +212,19 @@
 			isa = PBXGroup;
 			children = (
 				013189541AD5789200DA4F6B /* RequestManager.h */,
+				013189551AD57CEC00DA4F6B /* CustomRequestManager.h */,
+				013189561AD57CEC00DA4F6B /* CustomRequestManager.m */,
 			);
 			name = RequestManagers;
+			sourceTree = "<group>";
+		};
+		013189581AD583E900DA4F6B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				013189591AD5840800DA4F6B /* URLHelper.h */,
+				0131895A1AD5840800DA4F6B /* URLHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,7 +334,9 @@
 				0131893D1AD56F5200DA4F6B /* PopularPhotosViewController.m in Sources */,
 				013189091AD55DF400DA4F6B /* main.m in Sources */,
 				013189321AD55ECE00DA4F6B /* PopularPhotosRouter.m in Sources */,
+				0131895B1AD5840800DA4F6B /* URLHelper.m in Sources */,
 				0131890F1AD55DF400DA4F6B /* PlayingWith500px.xcdatamodeld in Sources */,
+				013189571AD57CEC00DA4F6B /* CustomRequestManager.m in Sources */,
 				013189411AD5706E00DA4F6B /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
