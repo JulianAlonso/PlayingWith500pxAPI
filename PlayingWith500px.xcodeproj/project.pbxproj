@@ -19,6 +19,7 @@
 		013189411AD5706E00DA4F6B /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189401AD5706E00DA4F6B /* CoreDataStack.m */; };
 		013189451AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189441AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m */; };
 		0131894C1AD5760100DA4F6B /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 0131894B1AD5760100DA4F6B /* APIVars.m */; };
+		013189521AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 013189511AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		013189481AD573AB00DA4F6B /* ExternalPhotosProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExternalPhotosProvider.h; path = Providers/ExternalPhotosProvider.h; sourceTree = "<group>"; };
 		0131894A1AD5760100DA4F6B /* APIVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIVars.h; path = Master/APIVars.h; sourceTree = "<group>"; };
 		0131894B1AD5760100DA4F6B /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
+		013189501AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FiveHungredpxExternalPhotosProvider.h; path = Providers/FiveHungredpxExternalPhotosProvider.h; sourceTree = "<group>"; };
+		013189511AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FiveHungredpxExternalPhotosProvider.m; path = Providers/FiveHungredpxExternalPhotosProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,8 @@
 			children = (
 				013189471AD572F500DA4F6B /* LocalPhotosProvider.h */,
 				013189481AD573AB00DA4F6B /* ExternalPhotosProvider.h */,
+				013189501AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.h */,
+				013189511AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m */,
 			);
 			name = Providers;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 			files = (
 				0131890C1AD55DF400DA4F6B /* AppDelegate.m in Sources */,
 				013189451AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m in Sources */,
+				013189521AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m in Sources */,
 				0131894C1AD5760100DA4F6B /* APIVars.m in Sources */,
 				0131893D1AD56F5200DA4F6B /* PopularPhotosViewController.m in Sources */,
 				013189091AD55DF400DA4F6B /* main.m in Sources */,
