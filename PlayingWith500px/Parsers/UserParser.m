@@ -7,7 +7,23 @@
 //
 
 #import "UserParser.h"
+#import "User.h"
+
+NSString *const kDicUserId = @"id";
+NSString *const kDicUserName = @"fullname";
+NSString *const kDicUserAvatarURL = @"userpic_url";
 
 @implementation UserParser
+
++ (User *)userFromDictionary:(NSDictionary *)dictionary
+{
+    User *user = [User new];
+    
+    user.userId = dictionary[kDicUserId];
+    user.userName = dictionary[kDicUserName];
+    user.userAvatarURL = dictionary[kDicUserAvatarURL];
+    
+    return user;
+}
 
 @end

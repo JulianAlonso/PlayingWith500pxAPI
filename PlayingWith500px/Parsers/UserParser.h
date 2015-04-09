@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class User;
+
 @interface UserParser : NSObject
+
++ (User *)userFromDictionary:(NSDictionary *)dictionary;
 
 @end
