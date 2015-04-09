@@ -18,6 +18,8 @@
 @property (nonatomic, copy) NSString *photoCamera;
 @property (nonatomic, copy) NSString *photoAperture;
 @property (nonatomic, copy) NSString *photoRating;
+@property (nonatomic, copy) NSString *photoLatitude;
+@property (nonatomic, copy) NSString *photoLongitude;
 @property (nonatomic, copy) NSString *photoURL;
 @property (nonatomic, strong) User *photoUser;
 

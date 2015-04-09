@@ -17,6 +17,8 @@ NSString *const kDicPhotoAperture = @"aperture";
 NSString *const kDicPhotoCamera = @"camera";
 NSString *const kDicPhotoImages = @"images";
 NSString *const kDicPhotoRating = @"rating";
+NSString *const kDicPhotoLongitude = @"longitude";
+NSString *const kDicPhotoLatitude = @"latitude";
 NSString *const kDicImageUrl = @"url";
 NSString *const kDicPhotoUser = @"user";
 
@@ -44,6 +46,8 @@ NSString *const kDicPhotoUser = @"user";
     photo.photoAperture = dictionary[kDicPhotoAperture];
     photo.photoCamera = dictionary[kDicPhotoCamera];
     photo.photoRating = dictionary[kDicPhotoRating];
+    photo.photoLongitude = dictionary[kDicPhotoLongitude];
+    photo.photoLatitude = dictionary[kDicPhotoLatitude];
     photo.photoURL = [PhotoParser photoUrlFromImagesDic:dictionary[kDicPhotoImages]];
     photo.photoUser = [UserParser userFromDictionary:dictionary[kDicPhotoUser]];
     
