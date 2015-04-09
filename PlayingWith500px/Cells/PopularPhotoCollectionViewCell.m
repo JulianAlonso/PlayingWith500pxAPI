@@ -12,7 +12,14 @@
 
 - (void)awakeFromNib
 {
-    self.backgroundColor = [UIColor greenColor];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+    [self addGestureRecognizer:tapGesture];
+}
+
+#pragma mark - Action methods.
+- (void)tapped:(UITapGestureRecognizer *)sender
+{
+    [self.delegate didTapAtPopularPhotoCollectionViewCell:self];
 }
 
 @end

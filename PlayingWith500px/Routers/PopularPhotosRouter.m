@@ -10,6 +10,7 @@
 #import "PopularPhotosViewController.h"
 #import "LoadPopularPhotosInteractor.h"
 #import "FiveHungredpxExternalPhotosProvider.h"
+#import "PhotoDetailRouter.h"
 
 
 @interface PopularPhotosRouter ()
@@ -34,6 +35,12 @@
     
     [window setRootViewController:nc];
     [window makeKeyAndVisible];
+}
+
+- (void)needNavigateToPhotoDetailWithPhoto:(Photo *)photo
+{
+    PhotoDetailRouter *detailRouter = [PhotoDetailRouter new];
+    [detailRouter pushFromNavigationController:self.popularPhotosViewController.navigationController withPhoto:photo];
 }
 
 @end

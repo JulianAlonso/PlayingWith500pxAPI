@@ -11,10 +11,17 @@
 @class Photo;
 @class PopularPhotoCollectionViewCell;
 
+@protocol PopularPhotoCollectionViewCellControllerDelegate <NSObject>
+
+- (void) didTapAtCell:(PopularPhotoCollectionViewCell *)cell withPhoto:(Photo *)photo;
+
+@end
+
 @interface PopularPhotoCollectionViewCellController : NSObject
 
 @property (nonatomic, weak) PopularPhotoCollectionViewCell *cell;
 @property (nonatomic, strong) Photo *photo;
+@property (nonatomic, strong) id<PopularPhotoCollectionViewCellControllerDelegate> delegate;
 
 - (UICollectionViewCell *)configuredCell;
 

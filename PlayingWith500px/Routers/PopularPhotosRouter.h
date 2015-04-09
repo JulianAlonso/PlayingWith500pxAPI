@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class Photo;
+
 @interface PopularPhotosRouter : NSObject
 
 - (void)showViewInWindow:(UIWindow *)window;
+- (void)needNavigateToPhotoDetailWithPhoto:(Photo *)photo;
 
 @end

@@ -11,10 +11,11 @@
 #import "PopularPhotoCollectionViewCell.h"
 #import "Photo.h"
 #import "PopularPhotoCollectionViewCellController.h"
+#import "PopularPhotosRouter.h"
 
 NSString *const kPhotosPath = @"photos";
 
-@interface PopularPhotosViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface PopularPhotosViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, PopularPhotoCollectionViewCellControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *photosCollectionView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
@@ -143,6 +144,7 @@ NSString *const kPhotosPath = @"photos";
     
     controller.cell = cell;
     controller.photo = self.photos[indexPath.item];
+    controller.delegate = self;
     
     return [controller configuredCell];
 }
@@ -167,6 +169,12 @@ NSString *const kPhotosPath = @"photos";
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
     return 0.0f;
+}
+
+#pragma mark - PopularPhotoCollectionViewCellControllerDelegate methods.
+- (void)didTapAtCell:(PopularPhotoCollectionViewCell *)cell withPhoto:(Photo *)photo
+{
+    [self.router needNavigateToPhotoDetailWithPhoto:photo];
 }
 
 #pragma mark - Dealloc methods.
