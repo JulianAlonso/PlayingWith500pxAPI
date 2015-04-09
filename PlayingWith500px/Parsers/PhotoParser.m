@@ -8,6 +8,7 @@
 
 #import "PhotoParser.h"
 #import "Photo.h"
+#import "UserParser.h"
 
 NSString *const kDicPhotoId = @"id";
 NSString *const kDicPhotoName = @"name";
@@ -17,6 +18,7 @@ NSString *const kDicPhotoCamera = @"camera";
 NSString *const kDicPhotoImages = @"images";
 NSString *const kDicPhotoRating = @"rating";
 NSString *const kDicImageUrl = @"url";
+NSString *const kDicPhotoUser = @"user";
 
 @implementation PhotoParser
 
@@ -43,6 +45,7 @@ NSString *const kDicImageUrl = @"url";
     photo.photoCamera = dictionary[kDicPhotoCamera];
     photo.photoRating = dictionary[kDicPhotoRating];
     photo.photoURL = [PhotoParser photoUrlFromImagesDic:dictionary[kDicPhotoImages]];
+    photo.photoUser = [UserParser userFromDictionary:dictionary[kDicPhotoUser]];
     
     return photo;
 }
