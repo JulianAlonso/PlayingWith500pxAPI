@@ -26,20 +26,25 @@ NSString *const kDicImageUrl = @"url";
     
     for (NSDictionary *dic in dictionaries)
     {
-        Photo *photo = [Photo new];
-        
-        photo.photoId = dic[kDicPhotoId];
-        photo.photoName = dic[kDicPhotoName];
-        photo.photoDescription = dic[kDicPhotoDescription];
-        photo.photoAperture = dic[kDicPhotoAperture];
-        photo.photoCamera = dic[kDicPhotoCamera];
-        photo.photoRating = dic[kDicPhotoRating];
-        photo.photoURL = [PhotoParser photoUrlFromImagesDic:dic[kDicPhotoImages]];
-        
-        [photos addObject:photo];
+        [photos addObject:[PhotoParser photoFromDictionary:dic]];
     }
     
     return photos;
+}
+
++ (Photo *)photoFromDictionary:(NSDictionary *)dictionary
+{
+    Photo *photo = [Photo new];
+    
+    photo.photoId = dictionary[kDicPhotoId];
+    photo.photoName = dictionary[kDicPhotoName];
+    photo.photoDescription = dictionary[kDicPhotoDescription];
+    photo.photoAperture = dictionary[kDicPhotoAperture];
+    photo.photoCamera = dictionary[kDicPhotoCamera];
+    photo.photoRating = dictionary[kDicPhotoRating];
+    photo.photoURL = [PhotoParser photoUrlFromImagesDic:dictionary[kDicPhotoImages]];
+    
+    return photo;
 }
 
 + (NSString *)photoUrlFromImagesDic:(NSArray *)dictionaries

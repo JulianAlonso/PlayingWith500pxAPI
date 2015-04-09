@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class Photo;
+
 @interface PhotoParser : NSObject
 
 + (NSArray *)photosFromDictionaries:(NSArray *)dictionaries;
++ (Photo *)photoFromDictionary:(NSDictionary *)dictionary;
 
 @end
