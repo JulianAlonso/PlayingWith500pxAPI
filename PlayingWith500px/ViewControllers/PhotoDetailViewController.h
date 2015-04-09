@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class PhotoDetailRouter;
 @class Photo;
 
 @interface PhotoDetailViewController : UIViewController
 
+@property (nonatomic, strong) PhotoDetailRouter *router;
 @property (nonatomic, strong) Photo *photo;
+
 
 @end
