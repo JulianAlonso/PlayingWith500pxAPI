@@ -30,6 +30,7 @@
 		013189711AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0131896F1AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.xib */; };
 		016C0BA11AD6A21C006C8A4A /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0B9F1AD6A21C006C8A4A /* PhotoDetailViewController.m */; };
 		016C0BA21AD6A21C006C8A4A /* PhotoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016C0BA01AD6A21C006C8A4A /* PhotoDetailViewController.xib */; };
+		016C0BA51AD6A805006C8A4A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0BA41AD6A805006C8A4A /* User.m */; };
 		1968463E0109609099F531B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6627E3CC7BA1CE79B9F9363 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,8 @@
 		016C0B9E1AD6A21C006C8A4A /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoDetailViewController.h; path = ViewControllers/PhotoDetailViewController.h; sourceTree = "<group>"; };
 		016C0B9F1AD6A21C006C8A4A /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoDetailViewController.m; path = ViewControllers/PhotoDetailViewController.m; sourceTree = "<group>"; };
 		016C0BA01AD6A21C006C8A4A /* PhotoDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoDetailViewController.xib; path = ViewControllers/PhotoDetailViewController.xib; sourceTree = "<group>"; };
+		016C0BA31AD6A805006C8A4A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = PONSOS/User.h; sourceTree = "<group>"; };
+		016C0BA41AD6A805006C8A4A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = PONSOS/User.m; sourceTree = "<group>"; };
 		7ACC1647D65B3FC2C94DC621 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A6627E3CC7BA1CE79B9F9363 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB033E5FCC04955B84B7FCFE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +281,8 @@
 			children = (
 				013189611AD599B100DA4F6B /* Photo.h */,
 				013189621AD599B100DA4F6B /* Photo.m */,
+				016C0BA31AD6A805006C8A4A /* User.h */,
+				016C0BA41AD6A805006C8A4A /* User.m */,
 			);
 			name = PONSOS;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 			files = (
 				0131890C1AD55DF400DA4F6B /* AppDelegate.m in Sources */,
 				013189451AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m in Sources */,
+				016C0BA51AD6A805006C8A4A /* User.m in Sources */,
 				016C0BA11AD6A21C006C8A4A /* PhotoDetailViewController.m in Sources */,
 				013189521AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m in Sources */,
 				013189671AD59A6800DA4F6B /* PhotoParser.m in Sources */,
