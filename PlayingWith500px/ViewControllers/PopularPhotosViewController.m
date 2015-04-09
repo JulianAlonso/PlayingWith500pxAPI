@@ -34,6 +34,7 @@ NSString *const kPhotosPath = @"photos";
     [self configRefreshControl];
     [self configPhotoCollectionView];
     [self registerToObservePhotos];
+    self.title = @"Popular";
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,12 +105,11 @@ NSString *const kPhotosPath = @"photos";
 #pragma mark - Custom methods.
 - (void)startResfresh
 {
-
-    if (self.photosCollectionView.contentOffset.y == -self.topLayoutGuide.length)
+    if (self.photosCollectionView.contentOffset.y == -self.topLayoutGuide.length && !self.photos)
     {
         [self.refreshControl beginRefreshing];
         
-        [self.photosCollectionView setContentOffset:CGPointMake(0, - self.topLayoutGuide.length - CGRectGetHeight(self.refreshControl.frame)) animated:YES];
+        [self.photosCollectionView setContentOffset:CGPointMake(0, - self.photosCollectionView.contentInset.top - CGRectGetHeight(self.refreshControl.frame)) animated:YES];
         
         [self loadPhotos];
     }

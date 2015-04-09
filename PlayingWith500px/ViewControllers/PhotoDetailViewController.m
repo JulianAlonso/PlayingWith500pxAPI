@@ -30,6 +30,7 @@
 {
     [super viewDidLoad];
     [self configItems];
+    self.title = self.photo.photoName;
 }
 
 - (void)didReceiveMemoryWarning
