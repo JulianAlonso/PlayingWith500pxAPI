@@ -9,11 +9,13 @@
 #import "PhotoParser.h"
 #import "Photo.h"
 
+NSString *const kDicPhotoId = @"id";
 NSString *const kDicPhotoName = @"name";
 NSString *const kDicPhotoDescription = @"description";
 NSString *const kDicPhotoAperture = @"aperture";
 NSString *const kDicPhotoCamera = @"camera";
 NSString *const kDicPhotoImages = @"images";
+NSString *const kDicPhotoRating = @"rating";
 NSString *const kDicImageUrl = @"url";
 
 @implementation PhotoParser
@@ -26,10 +28,12 @@ NSString *const kDicImageUrl = @"url";
     {
         Photo *photo = [Photo new];
         
+        photo.photoId = dic[kDicPhotoId];
         photo.photoName = dic[kDicPhotoName];
         photo.photoDescription = dic[kDicPhotoDescription];
         photo.photoAperture = dic[kDicPhotoAperture];
         photo.photoCamera = dic[kDicPhotoCamera];
+        photo.photoRating = dic[kDicPhotoRating];
         photo.photoURL = [PhotoParser photoUrlFromImagesDic:dic[kDicPhotoImages]];
         
         [photos addObject:photo];
