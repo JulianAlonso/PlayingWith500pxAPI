@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class Photo;
+@class PopularPhotoCollectionViewCell;
 
 @interface PopularPhotoCollectionViewCellController : NSObject
 
-@property (nonatomic, weak) UICollectionViewCell *cell;
+@property (nonatomic, weak) PopularPhotoCollectionViewCell *cell;
 @property (nonatomic, strong) Photo *photo;
 
 - (UICollectionViewCell *)configuredCell;

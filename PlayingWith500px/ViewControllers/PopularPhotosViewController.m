@@ -17,6 +17,8 @@ NSString *const kPhotosPath = @"photos";
 @interface PopularPhotosViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *photosCollectionView;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
+
 @property (nonatomic, strong) NSArray *photos;
 @property (nonatomic, strong) NSArray *controllers;
 
@@ -27,9 +29,10 @@ NSString *const kPhotosPath = @"photos";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self configRefreshControl];
     [self configPhotoCollectionView];
     [self registerToObservePhotos];
-    [self loadPhotos];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,7 +42,14 @@ NSString *const kPhotosPath = @"photos";
 
 - (void)viewDidLayoutSubviews
 {
+    [super viewDidLayoutSubviews];
     self.photosCollectionView.contentInset = UIEdgeInsetsMake(self.topLayoutGuide.length, 0, 0, 0);
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self startResfresh];
 }
 
 #pragma mark - Config methods.
@@ -49,6 +59,14 @@ NSString *const kPhotosPath = @"photos";
                 forCellWithReuseIdentifier:NSStringFromClass([PopularPhotoCollectionViewCell class])];
     self.photosCollectionView.delegate = self;
     self.photosCollectionView.dataSource = self;
+    self.photosCollectionView.alwaysBounceVertical = YES;
+    [self.photosCollectionView addSubview:self.refreshControl];
+}
+
+- (void)configRefreshControl
+{
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(loadPhotos) forControlEvents:UIControlEventValueChanged];
 }
 
 #pragma mark - load methods.
@@ -58,10 +76,16 @@ NSString *const kPhotosPath = @"photos";
     CompletedLoadPhotos block = ^void(NSArray *photos) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
-        strongSelf.photos = photos;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            strongSelf.photos = photos;
+            [strongSelf.photosCollectionView reloadData];
+        });
     };
     
-    [self.loadPopularPhotosInteractor loadPopularPhotosWithCompletion:block andUpdate:block];
+    [self.loadPopularPhotosInteractor loadPopularPhotosWithCompletion:block andUpdate:^(NSArray *photos) {
+        block(photos);
+        [weakSelf.refreshControl endRefreshing];
+    }];
 }
 
 #pragma mark - Update methods.
@@ -74,6 +98,20 @@ NSString *const kPhotosPath = @"photos";
         [controllers addObject:controller];
     }
     self.controllers = controllers;
+}
+
+#pragma mark - Custom methods.
+- (void)startResfresh
+{
+
+    if (self.photosCollectionView.contentOffset.y == -self.topLayoutGuide.length)
+    {
+        [self.refreshControl beginRefreshing];
+        
+        [self.photosCollectionView setContentOffset:CGPointMake(0, - self.topLayoutGuide.length - CGRectGetHeight(self.refreshControl.frame)) animated:YES];
+        
+        [self loadPhotos];
+    }
 }
 
 #pragma mark - Observe methods.
@@ -117,7 +155,18 @@ NSString *const kPhotosPath = @"photos";
 #pragma mark - LayoutDelegate methods.
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(200, 200);
+    CGFloat lado = CGRectGetWidth(self.photosCollectionView.frame) / 2;
+    return CGSizeMake(lado, lado);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0.0f;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0.0f;
 }
 
 #pragma mark - Dealloc methods.

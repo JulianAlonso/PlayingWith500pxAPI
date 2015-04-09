@@ -6,12 +6,18 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "PopularPhotoCollectionViewCellController.h"
+#import "PopularPhotoCollectionViewCell.h"
+#import "Photo.h"
 
 @implementation PopularPhotoCollectionViewCellController
 
 - (UICollectionViewCell *)configuredCell
 {
+    self.cell.photoNameLabel.text = self.photo.photoName;
+    [self.cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.photo.photoURL]];
+    
     return self.cell;
 }
 
