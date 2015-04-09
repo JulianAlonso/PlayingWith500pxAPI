@@ -7,13 +7,14 @@
 //
 
 #import "PhotoDetailViewController.h"
+#import "Photo.h"
 
 @interface PhotoDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *photoNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *photoDescriptionLabel;
-@property (weak, nonatomic) IBOutlet UILabel *photoInfoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *photoCameraLabel;
 @property (weak, nonatomic) IBOutlet UILabel *photoApertureLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *userAvatarImageView;
@@ -30,6 +31,15 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Config methods.
+- (void)configItems
+{
+    self.photoNameLabel.text = self.photo.photoName;
+    self.photoDescriptionLabel.text = self.photo.photoDescription;
+    self.photoCameraLabel.text = self.photo.photoCamera;
+    self.photoApertureLabel.text = self.photo.photoAperture;
 }
 
 @end

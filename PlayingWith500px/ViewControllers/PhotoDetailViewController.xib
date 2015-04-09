@@ -7,9 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailViewController">
             <connections>
                 <outlet property="photoApertureLabel" destination="UgP-it-4W4" id="Zvb-19-V67"/>
+                <outlet property="photoCameraLabel" destination="Hqv-5b-Rg3" id="cLb-j7-g8j"/>
                 <outlet property="photoDescriptionLabel" destination="QDJ-by-QvB" id="by5-Ey-HA1"/>
                 <outlet property="photoImageView" destination="g9a-L8-onj" id="fHF-Yy-Di9"/>
-                <outlet property="photoInfoLabel" destination="Hqv-5b-Rg3" id="ouA-Uu-4cX"/>
                 <outlet property="photoNameLabel" destination="IRv-Ee-TrZ" id="wyl-Kq-879"/>
                 <outlet property="userAvatarImageView" destination="XZ7-wg-b32" id="1OW-bA-LOr"/>
                 <outlet property="userNameLabel" destination="XKp-xA-M4f" id="ezh-UO-F90"/>
