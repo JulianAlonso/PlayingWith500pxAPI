@@ -27,6 +27,7 @@ NSString *const kPhotosPath = @"photos";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configPhotoCollectionView];
     [self registerToObservePhotos];
     [self loadPhotos];
 }
