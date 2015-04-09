@@ -37,6 +37,7 @@
 		016C0BBE1AD6CB6A006C8A4A /* PhotoMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0BBD1AD6CB6A006C8A4A /* PhotoMO.m */; };
 		016C0BC21AD6CFE8006C8A4A /* PhotoMO+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0BC11AD6CFE8006C8A4A /* PhotoMO+Implementation.m */; };
 		016C0BC51AD6CFFD006C8A4A /* UserMO+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0BC41AD6CFFD006C8A4A /* UserMO+Implementation.m */; };
+		016C0BC81AD6F684006C8A4A /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0BC71AD6F684006C8A4A /* CoreDataManager.m */; };
 		1968463E0109609099F531B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6627E3CC7BA1CE79B9F9363 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,8 @@
 		016C0BC11AD6CFE8006C8A4A /* PhotoMO+Implementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PhotoMO+Implementation.m"; path = "ManagedObjects/Implementations/PhotoMO+Implementation.m"; sourceTree = "<group>"; };
 		016C0BC31AD6CFFD006C8A4A /* UserMO+Implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UserMO+Implementation.h"; path = "ManagedObjects/Implementations/UserMO+Implementation.h"; sourceTree = "<group>"; };
 		016C0BC41AD6CFFD006C8A4A /* UserMO+Implementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UserMO+Implementation.m"; path = "ManagedObjects/Implementations/UserMO+Implementation.m"; sourceTree = "<group>"; };
+		016C0BC61AD6F684006C8A4A /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = CoreData/CoreDataManager.h; sourceTree = "<group>"; };
+		016C0BC71AD6F684006C8A4A /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = CoreData/CoreDataManager.m; sourceTree = "<group>"; };
 		7ACC1647D65B3FC2C94DC621 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A6627E3CC7BA1CE79B9F9363 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB033E5FCC04955B84B7FCFE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 				0131890D1AD55DF400DA4F6B /* PlayingWith500px.xcdatamodeld */,
 				0131893F1AD5706E00DA4F6B /* CoreDataStack.h */,
 				013189401AD5706E00DA4F6B /* CoreDataStack.m */,
+				016C0BC61AD6F684006C8A4A /* CoreDataManager.h */,
+				016C0BC71AD6F684006C8A4A /* CoreDataManager.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -517,6 +522,7 @@
 			files = (
 				0131890C1AD55DF400DA4F6B /* AppDelegate.m in Sources */,
 				013189451AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m in Sources */,
+				016C0BC81AD6F684006C8A4A /* CoreDataManager.m in Sources */,
 				016C0BA51AD6A805006C8A4A /* User.m in Sources */,
 				016C0BBB1AD6CB6A006C8A4A /* UserMO.m in Sources */,
 				016C0BA11AD6A21C006C8A4A /* PhotoDetailViewController.m in Sources */,
