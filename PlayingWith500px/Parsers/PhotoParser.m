@@ -42,14 +42,14 @@ NSString *const kDicPhotoUser = @"user";
 {
     Photo *photo = [Photo new];
     
-    photo.photoId = dictionary[kDicPhotoId];
-    photo.photoName = dictionary[kDicPhotoName];
-    photo.photoDescription = dictionary[kDicPhotoDescription];
-    photo.photoAperture = dictionary[kDicPhotoAperture];
-    photo.photoCamera = dictionary[kDicPhotoCamera];
-    photo.photoRating = dictionary[kDicPhotoRating];
-    photo.photoLongitude = dictionary[kDicPhotoLongitude];
-    photo.photoLatitude = dictionary[kDicPhotoLatitude];
+    photo.photoId = [PhotoParser parseItemFromId: dictionary[kDicPhotoId]];
+    photo.photoName = [PhotoParser parseItemFromId: dictionary[kDicPhotoName]];
+    photo.photoDescription = [PhotoParser parseItemFromId: dictionary[kDicPhotoDescription]];
+    photo.photoAperture = [PhotoParser parseItemFromId: dictionary[kDicPhotoAperture]];
+    photo.photoCamera = [PhotoParser parseItemFromId: dictionary[kDicPhotoCamera]];
+    photo.photoRating = [PhotoParser parseItemFromId: dictionary[kDicPhotoRating]];
+    photo.photoLongitude = [PhotoParser parseItemFromId: dictionary[kDicPhotoLongitude]];
+    photo.photoLatitude = [PhotoParser parseItemFromId: dictionary[kDicPhotoLatitude]];
     photo.photoUser = [UserParser userFromDictionary:dictionary[kDicPhotoUser]];
     
     [PhotoParser addImagesToPhoto:photo fromDictionaries:dictionary[kDicPhotoImages]];
@@ -63,13 +63,22 @@ NSString *const kDicPhotoUser = @"user";
     {
         if ([[dic[kDicImageSize] stringValue] isEqualToString:IMAGE_SIZE_3])
         {
-            photo.photoMiniPicUrl = dic[kDicImageUrl];
+            photo.photoMiniPicUrl = [PhotoParser parseItemFromId: dic[kDicImageUrl]];
         }
         else if ([[dic[kDicImageSize] stringValue] isEqualToString:IMAGE_SIZE_1600])
         {
-            photo.photoBigPicUrl = dic[kDicImageUrl];
+            photo.photoBigPicUrl = [PhotoParser parseItemFromId: dic[kDicImageUrl]];
         }
     }
+}
+
++ (NSString *)parseItemFromId:(id)item
+{
+    if ([item isKindOfClass:[NSString class]])
+    {
+        return item;
+    }
+    return nil;
 }
 
 @end
