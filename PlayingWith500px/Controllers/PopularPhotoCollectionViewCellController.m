@@ -16,7 +16,7 @@
 - (UICollectionViewCell *)configuredCell
 {
     self.cell.photoNameLabel.text = self.photo.photoName;
-    [self.cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.photo.photoURL]];
+    [self.cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.photo.photoMiniPicUrl]];
     
     return self.cell;
 }

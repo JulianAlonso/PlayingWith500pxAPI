@@ -27,7 +27,7 @@
             param = [URLHelper paramFromString:params[key] andKey:key];
         }
         [URLHelper addParam:param toUrl:finalURL withConcatenator:concatenator];
-       concatenator = @"&";
+        concatenator = @"&";
     }
     
     return [NSURL URLWithString:finalURL];

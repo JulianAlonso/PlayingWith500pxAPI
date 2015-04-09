@@ -20,7 +20,8 @@
 @property (nonatomic, copy) NSString *photoRating;
 @property (nonatomic, copy) NSString *photoLatitude;
 @property (nonatomic, copy) NSString *photoLongitude;
-@property (nonatomic, copy) NSString *photoURL;
+@property (nonatomic, copy) NSString *photoMiniPicUrl;
+@property (nonatomic, copy) NSString *photoBigPicUrl;
 @property (nonatomic, strong) User *photoUser;
 
 @end
