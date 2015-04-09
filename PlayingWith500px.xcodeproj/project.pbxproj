@@ -33,6 +33,10 @@
 		016C0BA51AD6A805006C8A4A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0BA41AD6A805006C8A4A /* User.m */; };
 		016C0BA81AD6A8A0006C8A4A /* UserParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0BA71AD6A8A0006C8A4A /* UserParser.m */; };
 		016C0BAB1AD6AB78006C8A4A /* PhotoDetailRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0BAA1AD6AB78006C8A4A /* PhotoDetailRouter.m */; };
+		016C0BBB1AD6CB6A006C8A4A /* UserMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0BBA1AD6CB6A006C8A4A /* UserMO.m */; };
+		016C0BBE1AD6CB6A006C8A4A /* PhotoMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0BBD1AD6CB6A006C8A4A /* PhotoMO.m */; };
+		016C0BC21AD6CFE8006C8A4A /* PhotoMO+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0BC11AD6CFE8006C8A4A /* PhotoMO+Implementation.m */; };
+		016C0BC51AD6CFFD006C8A4A /* UserMO+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C0BC41AD6CFFD006C8A4A /* UserMO+Implementation.m */; };
 		1968463E0109609099F531B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6627E3CC7BA1CE79B9F9363 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +102,14 @@
 		016C0BA71AD6A8A0006C8A4A /* UserParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserParser.m; path = Parsers/UserParser.m; sourceTree = "<group>"; };
 		016C0BA91AD6AB78006C8A4A /* PhotoDetailRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoDetailRouter.h; path = Routers/PhotoDetailRouter.h; sourceTree = "<group>"; };
 		016C0BAA1AD6AB78006C8A4A /* PhotoDetailRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoDetailRouter.m; path = Routers/PhotoDetailRouter.m; sourceTree = "<group>"; };
+		016C0BB91AD6CB6A006C8A4A /* UserMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserMO.h; path = ManagedObjects/UserMO.h; sourceTree = "<group>"; };
+		016C0BBA1AD6CB6A006C8A4A /* UserMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserMO.m; path = ManagedObjects/UserMO.m; sourceTree = "<group>"; };
+		016C0BBC1AD6CB6A006C8A4A /* PhotoMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoMO.h; path = ManagedObjects/PhotoMO.h; sourceTree = "<group>"; };
+		016C0BBD1AD6CB6A006C8A4A /* PhotoMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoMO.m; path = ManagedObjects/PhotoMO.m; sourceTree = "<group>"; };
+		016C0BC01AD6CFE8006C8A4A /* PhotoMO+Implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PhotoMO+Implementation.h"; path = "ManagedObjects/Implementations/PhotoMO+Implementation.h"; sourceTree = "<group>"; };
+		016C0BC11AD6CFE8006C8A4A /* PhotoMO+Implementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PhotoMO+Implementation.m"; path = "ManagedObjects/Implementations/PhotoMO+Implementation.m"; sourceTree = "<group>"; };
+		016C0BC31AD6CFFD006C8A4A /* UserMO+Implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UserMO+Implementation.h"; path = "ManagedObjects/Implementations/UserMO+Implementation.h"; sourceTree = "<group>"; };
+		016C0BC41AD6CFFD006C8A4A /* UserMO+Implementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UserMO+Implementation.m"; path = "ManagedObjects/Implementations/UserMO+Implementation.m"; sourceTree = "<group>"; };
 		7ACC1647D65B3FC2C94DC621 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A6627E3CC7BA1CE79B9F9363 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB033E5FCC04955B84B7FCFE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +171,7 @@
 				0131896C1AD5A06700DA4F6B /* Cells */,
 				013189681AD5A00000DA4F6B /* Controllers */,
 				013189601AD5998E00DA4F6B /* PONSOS */,
+				016C0BAC1AD6CAEE006C8A4A /* ManagedObjects */,
 				013189341AD55EF000DA4F6B /* CoreData */,
 				013189161AD55DF400DA4F6B /* Images.xcassets */,
 				013189181AD55DF400DA4F6B /* LaunchScreen.xib */,
@@ -325,6 +338,29 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		016C0BAC1AD6CAEE006C8A4A /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				016C0BBC1AD6CB6A006C8A4A /* PhotoMO.h */,
+				016C0BBD1AD6CB6A006C8A4A /* PhotoMO.m */,
+				016C0BB91AD6CB6A006C8A4A /* UserMO.h */,
+				016C0BBA1AD6CB6A006C8A4A /* UserMO.m */,
+				016C0BBF1AD6CFBF006C8A4A /* Implementations */,
+			);
+			name = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		016C0BBF1AD6CFBF006C8A4A /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				016C0BC01AD6CFE8006C8A4A /* PhotoMO+Implementation.h */,
+				016C0BC11AD6CFE8006C8A4A /* PhotoMO+Implementation.m */,
+				016C0BC31AD6CFFD006C8A4A /* UserMO+Implementation.h */,
+				016C0BC41AD6CFFD006C8A4A /* UserMO+Implementation.m */,
+			);
+			name = Implementations;
+			sourceTree = "<group>";
+		};
 		6BBD093E0A2E47FFADA545EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,13 +518,16 @@
 				0131890C1AD55DF400DA4F6B /* AppDelegate.m in Sources */,
 				013189451AD5715E00DA4F6B /* LoadPopularPhotosInteractor.m in Sources */,
 				016C0BA51AD6A805006C8A4A /* User.m in Sources */,
+				016C0BBB1AD6CB6A006C8A4A /* UserMO.m in Sources */,
 				016C0BA11AD6A21C006C8A4A /* PhotoDetailViewController.m in Sources */,
 				013189521AD5779700DA4F6B /* FiveHungredpxExternalPhotosProvider.m in Sources */,
+				016C0BBE1AD6CB6A006C8A4A /* PhotoMO.m in Sources */,
 				013189671AD59A6800DA4F6B /* PhotoParser.m in Sources */,
 				0131896B1AD5A02000DA4F6B /* PopularPhotoCollectionViewCellController.m in Sources */,
 				0131894C1AD5760100DA4F6B /* APIVars.m in Sources */,
 				016C0BAB1AD6AB78006C8A4A /* PhotoDetailRouter.m in Sources */,
 				013189631AD599B100DA4F6B /* Photo.m in Sources */,
+				016C0BC21AD6CFE8006C8A4A /* PhotoMO+Implementation.m in Sources */,
 				0131893D1AD56F5200DA4F6B /* PopularPhotosViewController.m in Sources */,
 				013189091AD55DF400DA4F6B /* main.m in Sources */,
 				0131895F1AD5940300DA4F6B /* RequestManagerFactory.m in Sources */,
@@ -498,6 +537,7 @@
 				016C0BA81AD6A8A0006C8A4A /* UserParser.m in Sources */,
 				013189571AD57CEC00DA4F6B /* CustomRequestManager.m in Sources */,
 				013189701AD5A09B00DA4F6B /* PopularPhotoCollectionViewCell.m in Sources */,
+				016C0BC51AD6CFFD006C8A4A /* UserMO+Implementation.m in Sources */,
 				013189411AD5706E00DA4F6B /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

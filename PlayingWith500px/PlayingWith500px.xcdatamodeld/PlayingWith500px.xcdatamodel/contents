@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C1514" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="PhotoMO" representedClassName="PhotoMO" syncable="YES">
+        <attribute name="photoAperture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoBigPicURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoCamera" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoLatitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoLongitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoMiniPicURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoRating" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photoUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserMO" inverseName="userPhotos" inverseEntity="UserMO" syncable="YES"/>
+    </entity>
+    <entity name="UserMO" representedClassName="UserMO" syncable="YES">
+        <attribute name="userAvatarURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="userPhotos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoMO" inverseName="photoUser" inverseEntity="PhotoMO" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="PhotoMO" positionX="-63" positionY="-18" width="128" height="208"/>
+        <element name="UserMO" positionX="-36" positionY="81" width="128" height="103"/>
+    </elements>
 </model>
