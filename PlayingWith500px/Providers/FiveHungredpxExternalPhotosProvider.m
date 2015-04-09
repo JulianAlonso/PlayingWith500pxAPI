@@ -17,8 +17,7 @@
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:[APIVars defaultParams]];
     [params setObject:POPULAR_FEATURE forKey:PARAM_FEATURE];
-    [params setObject:IMAGE_SIZE_3 forKeyedSubscript:PARAM_IMAGE_SIZE];
-    [params setObject:IMAGE_SIZE_1600 forKeyedSubscript:PARAM_IMAGE_SIZE];
+    [params setObject:@[IMAGE_SIZE_3, IMAGE_SIZE_1600] forKeyedSubscript:PARAM_IMAGE_SIZE];
     
     [self.requestManager GETendpoint:PHOTOS_END_POINT params:params Completion:^(NSData *data) {
         
